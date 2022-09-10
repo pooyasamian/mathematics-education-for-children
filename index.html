@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+	<title>پویا سمعیان</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='css/notie.min.css'/>
+	<link rel='stylesheet' href='css/style.css'/>
+	<bgsound src="music.mp3"></bgsound>
+</head>
+
+<body>
+	<div id="app">
+		<header><h1>ریاضی برای کودکان - پویا سمعیان</h1></header>
+		<score :current-score="currentScore" :total="total"></score>
+		<question :no1="no1" :no2="no2" :operator="operator"></question>
+		<answers :options="options" :is-active="isActive" :add-active-class="addActiveClass"></answers>
+
+		<div id="button">
+			<button type="button" @click="checkSolution">{{text === 'Submit' ? 'ثبت' : 'بعدی'}}</button>
+		</div>
+		<!-- <audio id="music" loop autoplay controls>
+			<source src="/home/hassan/Littel-Gems---Math-for-Kids/music.mp3">
+		</audio> -->
+
+		<!-- <embed name="GoodEnough" src="music.mp3" loop="true" hidden="true" autostart="true">
+		<embed src="file:///home/hassan/Littel-Gems---Math-for-Kids/music.mp3" loop="true" autostart="true" hidden="true" autoplay="true" /> -->
+	</div>
+
+	<script src='js/notie.min.js'></script>
+	<script src='js/vue.min.js'></script>
+	<script src='js/app.js'></script>
+</body>
+</html>

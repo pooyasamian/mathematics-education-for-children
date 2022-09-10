@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'yekan';
+  src: url(Yekan.ttf);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+  text-align: center;
+	font-family: 'yekan';
+}
+
+body {
+background-image: url(../back.jpg);	
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+header {
+	padding: 2em;
+	color: white;
+}
+
+header h1 {
+	font-size: 3em;
+	text-shadow: 3px 3px 7px #333;
+}
+
+#score {
+	float: center;
+	color: red;
+	font-weight: bolder;
+	font-size: 2.5em;
+	margin: 1em 0;
+	text-shadow: 0 10px 30px white;
+}
+
+#question-wrapper {
+	display: flex;
+	justify-content: center;
+	clear: right;
+}
+
+#question-wrapper h2 {
+	padding: 1.5em;
+	border-radius: 50%;
+	color: white;
+	background-color: #154360;
+	font-size: 3em;
+	box-shadow: 0px 4px 8px #41B7EA;
+}
+
+#options-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.option {
+	flex: 1;
+	border-radius: 1em;
+	color: white;
+	background-color: #6495ed;
+	font-size: 1.5em;
+	cursor: pointer;
+	padding: 2em;
+	margin: 2em;
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.39);
+}
+
+.option-1 {
+	background-color: #2cb454;
+}
+
+.option-2 {
+	background-color: #1976d2;
+}
+
+.option-3 {
+	background-color: #bc285d;
+}
+
+.option-4 {
+	background-color: #D26B1F;
+}
+
+.option.active {
+	color: black;
+	background-color: white;
+	box-shadow: 0 10px 30px 0 white;
+	transition: all 300ms ease-in-out;
+}
+
+#button button {
+	margin: 1em;
+	font-size: 2em;
+	cursor: pointer;
+	color: white;
+	background: #E01678;
+	border-radius: 8px;
+	padding: 0.5em 1em;
+	outline: none;
+	border: 0;
+}
