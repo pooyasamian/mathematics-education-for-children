@@ -12,6 +12,8 @@
 <body>
 	<div id="app">
 		<header><h1>ریاضی برای کودکان - پویا سمعیان</h1></header>
+		<audio controls autoplay muted="muted" loop="loop" id="my_audio" src="music.mp3" type="audio/mpeg">
+		</audio>
 		<score :current-score="currentScore" :total="total"></score>
 		<question :no1="no1" :no2="no2" :operator="operator"></question>
 		<answers :options="options" :is-active="isActive" :add-active-class="addActiveClass"></answers>
@@ -19,8 +21,6 @@
 		<div id="button">
 			<button type="button" @click="checkSolution">{{text === 'Submit' ? 'ثبت' : 'بعدی'}}</button>
 		</div>
-		<audio muted="muted" loop="loop" id="my_audio" src="music.mp3" type="audio/mpeg">
-		</audio>
 	</div>
 
 	<script src='js/notie.min.js'></script>
