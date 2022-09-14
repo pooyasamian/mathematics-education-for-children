@@ -10,8 +10,8 @@ Vue.component('score',{
 Vue.component('question',{
 	props: ['no1','no2','operator'],
 	template: `
-		<div id="question-wrapper">
-			<h2>? = {{no2}} {{operator}} {{no1}}</h2>
+		<div id="question-wrapper" dir="ltr">
+			<h2>{{no1}} {{operator}} {{no2}} = ?</h2>
 		</div>
 	`
 });
@@ -19,12 +19,16 @@ Vue.component('question',{
 Vue.component('answers',{
 	props: ['options','isActive','addActiveClass'],
 	template: `
-		<div id="options-wrapper" dir="ltr">
-			<div class="option option-1" :class="{ active: isActive[0] }" @click="addActiveClass(0)">{{options[0]}}</div>
-			<div class="option option-2" :class="{ active: isActive[1] }" @click="addActiveClass(1)">{{options[1]}}</div>
-			<div class="option option-3" :class="{ active: isActive[2] }" @click="addActiveClass(2)">{{options[2]}}</div>
-			<div class="option option-4" :class="{ active: isActive[3] }" @click="addActiveClass(3)">{{options[3]}}</div>
-		</div>
+		<div>
+			<div id="options-wrapper" dir="ltr">
+				<div class="option option-1" :class="{ active: isActive[0] }" @click="addActiveClass(0)">{{options[0]}}</div>
+				<div class="option option-2" :class="{ active: isActive[1] }" @click="addActiveClass(1)">{{options[1]}}</div>
+			</div>
+			<div id="options-wrapper" dir="ltr">
+				<div class="option option-3" :class="{ active: isActive[2] }" @click="addActiveClass(2)">{{options[2]}}</div>
+				<div class="option option-4" :class="{ active: isActive[3] }" @click="addActiveClass(3)">{{options[3]}}</div>
+			</div>
+		<div>
 	`
 });
 
@@ -44,8 +48,7 @@ new Vue({
 	},
 	created: function(){
 		this.startQuiz();
-		console.log(document.body);
-		console.log(document.body.findElementById('music'));
+		document.getElementById("my_audio").play();
 	},
 	methods: {
 		randomNumber: function(min,max) {
